@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+body, html{
+background-color:pink;
+background-image: linear-gradient(to bottom right, pink, blue);
+height: 100%;
+margin: 0;
+}
+
+.topnav {
+  position: relative;
+  overflow: hidden;
+  background-color: orange;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: white;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: blue;
+  color: white;
+}
+
+.bg{
+  background-image: url("foto/taco.jpg");
+  height: 400px; 
+  width: 900px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  float: left;
+}
+
+.text-block{
+  position: relative;
+  background-color: orange;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+h1{
+  font-size:400%;
+}
+
+.a{
+  display:flex;
+}
+
+.a div{
+  padding:20px;
+}
+
+.a .box-1, .a .box-2{
+  background:green;
+  color:white;
+}
+
+
+.b{
+  display:flex;
+}
+
+.b div{
+  padding:20px;
+}
+
+.b .box-1, .b .box-2, .b .box-3, .b .box-4{
+  background:white;
+  color:black;
+  
+}
+
+*{
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+}
+
+.left {
+  width: 75%;
+}
+
+.right {
+  width: 25%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+mark{
+  background-color:orange;
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+
+    <!--==========================
+    Header
+  ============================-->
+<header>
+
+<h1>Terry's<span> Taco</span></a></h1>
+
+<div class="topnav">
+ <a href="#Tacos">Tacos</a>
+ <a href="#Beers">Beers</a>
+ <a href="#Wines">Wines</a>
+ <a href="#Dessert">Dessert</a>
+ <a href="#Reservations">Reservations</a>
+</div>
+
+</header>
+
+
+<!--gambar makanan-->
+
+<section class="row">
+
+<div class="column left">
+<div class="bg">
+<div id="Tacos">
+
+<h1><mark>Terry's Taco</mark></h1>
+<p><mark>Pretty Good Tacos!</mark></p>
+
+</div>
+</div>
+</div>
+
+<!--sebelah gambar-->
+
+<div class="column right">
+
+<center>
+<div class="text-block">
+<h1>$1.99</h1>
+<h4>Tacos</h4>
+</div>
+
+<div class="text-block">
+<h1>$3.99</h1>
+<h4>Kombucha</h4>
+</div>
+</center>
+
+</div>
+
+</section>
+
+<!--logo-->
+
+<section class="b">
+
+<div class="box-1">
+<h4>Tacos</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+</div>
+
+<div class="box-2">
+<h4>Beer</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+</div>
+
+<div class="box-3">
+<h4>Wine</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+</div>
+
+<div class="box-4">
+<h4>Music</h4>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+</div>
+
+</section>
+
+<!--Featured Taco-->
+<img src="foto/taco2.jpg">
+<h3>Featured Taco</h3>
+<p>Slim Profile, easy to hold and loaded with cheese.<br>This is the one you have been waiting for</p>
+<a href="learn more" Class="button1" style="text-decoration: none;">learn more</a>
+
+<!--instagram-->
+
+
+</body>
+</html>
