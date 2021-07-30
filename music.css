@@ -1,0 +1,171 @@
+body{
+	  font-family: 'PT Sans Narrow', sans-serif;
+  background-color: #252529;
+  margin: 0;
+  color: #fff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #ccc;
+}
+
+img {
+  width: 100%;
+}
+
+
+/*nav*/
+nav {
+  height: 40px;
+  width: 100%;
+  background-color: #333;
+  color: #eee;
+  position: fixed;
+}
+nav ul {
+  padding: 0;
+  margin: 0;
+}
+nav li {
+  display: inline;
+  float: left;
+}
+nav a {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+  text-decoration: none;
+  padding: 10px 0;
+  color: #eee;
+  text-decoration: none;
+}
+nav li:hover {
+  background-color: #444;
+}
+
+/*  Utility Classes */
+.container {
+  max-width: 1180px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+.lead {
+  font-size: 1.3rem;
+}
+
+.text-center { text-align: center;}
+
+.mb {
+  margin-bottom: 1rem;
+}
+
+.mt {
+  margin-top: 1rem;
+}
+
+/* mytunes */
+#mytunes {
+  margin: 0;
+  padding: 0;
+  background: url('../foto/piano.jpg') no-repeat center/cover;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow-y: hidden;
+}
+
+#mytunes .container {
+  margin-top: 25vh;
+}
+
+#mytunes h1 {
+  font-size: 4rem;
+  margin-bottom: 0;
+}
+
+#mytunes h2 {
+  font-size: 2rem;
+}
+
+
+/*  Section */
+.section {
+  padding: 2rem 0;
+}
+
+.section h3 {
+  font-size: 2rem;
+}
+
+section#entertainment {
+  background: url('https://www.imonweb.co.uk/images/mytunes/section-bg.jpg') no-repeat bottom/cover;
+  padding: 10rem 0;
+}
+
+.GF {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(2,1fr);
+  text-align: left;
+}
+
+/*  Buttons */
+.button {
+  padding: 1rem;
+  color: #fff;
+  display: inline-block;
+}
+
+.button1{
+  background-color: #b90415;
+}
+
+.button1:hover {
+  background-color: #d3071Bb;
+}
+
+.button2 {
+  background-color: #103063;
+}
+
+.button2:hover {
+  background-color: #143f85;
+}
+
+/*other*/
+
+.bg-light{
+	background-color: white;
+  color: black;
+}
+
+/*grid*/
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+.grid {
+  margin: 0 auto;
+  width: 960px;
+}
+.grid,
+.col-1-4{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.col-1-4 {
+  width: 24%;
+  display: inline-block;
+  vertical-align: top;
+  text-align: left;
+}
