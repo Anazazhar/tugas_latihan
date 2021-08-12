@@ -1,172 +1,328 @@
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+html{
+	scroll-behavior: smooth;
+}
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins' , sans-serif;
+}
+body{
+	background: #0a2a43;
+	min-height: 1500px;
+}
+/*home*/
+
+#section{
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#section:before{
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 100px;
+	background: linear-gradient(to top, #0a2a43, transparent);
+	z-index: 1000;
+}
+#section:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #0a2a43;
+	z-index: 1000;
+	mix-blend-mode: color;
+}
+#section img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	pointer-events: none;
+}
+#section #text{
+	position: relative;
+	color: #fff;
+	font-size: 10em;
+	z-index: 1;
+}
+#section #road{
+	z-index: 2;
 }
 
-ol, ul {
-  list-style: none;
+/*header*/
+
+#header{
+	top: 0;
+	width: 100%;
+	padding: 10px 100px;
+	display: flex;
+	justify-content: flex-end;
+	position: absolute;
+	z-index:10000;
+
+}
+#header ul{
+	display: flex;
+}
+#header ul li{
+	list-style: none;
+	margin-left: 20px;
+}
+#header ul li a{
+	text-decoration: none;
+	color: black;
+	padding: 6px 15px;
+	background: white;
+	border-radius: 20px;
+}
+#header ul li a:hover{
+	background: black;
+	color: #fff;
+	border-radius: 20px;
 }
 
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
+
+/*about*/
+
+#about{
+	min-height: 100vh;
+	padding: 10vh 30vh;
+	color: white;
+	margin-bottom: 44px;
+
+}
+#about q{
+	font-size: 40px;
+}
+#about q, p{
+ 	margin-bottom: 22px;
+}
+#about #text{
+	font-size: 50px;
+	margin-bottom: 25px;
+	border-bottom: 4px solid #648880;
+
 }
 
 
-h1, h2, h3, h4 {
-  color: #648880;
+/*service*/
+
+#service{
+	height: 100vh;
+	margin-bottom: 100px;
 }
-h1, h3, h4, h5, p {
-  margin-bottom: 22px;
+#service a{
+	text-decoration: none;
+	color: black;
+	text-align: center;
+	vertical-align: middle;
 }
-h1 {
-  font-size: 36px;
-  line-height: 44px;
-}
-h2 {
-  font-size: 24px;
-  line-height: 44px;
-}
-h3 {
-  font-size: 21px;
-}
-h4 {
-  font-size: 18px;
-}
-h5 {
-  color: #a9b2b9;
-  font-size: 14px;
-  font-weight: 400;
-  text-transform: uppercase;
+#service p{
+	color: black;
+	text-align: center;
+	position: relative;
+	top: 50%;
+	font-size: 30px;
+	font-family: Papyrus;
 }
 
-body {
-  background: #293f50;
-  color: #888;
-  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1;
+
+/*work*/
+
+#work{
+	height: 150vh;
+	margin-bottom: 70px;
+}
+#work h1{
+	margin-bottom: 25px;
+	font-size: 50px;
+	border-left: 4px solid #648880;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block;
+.card{
+	width: 410px;
+	height: 335px;
+	display: inline-block;
+	border-radius: 10px;
+	padding: 15px 25px;
+	box-sizing: border-box;
+	cursor: pointer;
+	margin: 10px 15px;
+	background-position: center;
+	background-size: cover;
+	transition: transform 0.5s;
 }
+.card1{
+		background-image: url('../foto/works1.png');
+		width: 1300px;
+		height: 435px;
+}
+.card2{
+		background-image: url('../foto/works2.png');
+		width: 770px;
+		height: 335px;
+}
+.card3{
+		background-image: url('../foto/works3.png');
+		width: 490px;
+		height: 335px;
+}
+.card4{
+		background-image: url('../foto/works4.png');
+}
+.card5{
+		background-image: url('../foto/works5.png');
+}
+.card6{
+		background-image: url('../foto/works6.png');
+}
+.card:hover{
+	transform: translateY(-10px);
+}
+
+/*footer*/
+
+#footer {
+	padding: 10vh 1vh;
+ 	margin: auto;
+ 	color: white;
+ 	height: 70vh;
+}
+#footer h1{
+	margin-bottom: 25px;
+	font-size: 50px;
+	border-bottom: 4px solid #648880;
+}
+#footer a{
+	text-decoration: none;
+}
+#footer #ab{
+	color: grey;
+	font-size: 20px;
+}
+#footer p{
+	color: white;
+	font-size: 30px;
+	background-color: #0a2a43;
+	box-shadow: inset 350px 0 0 0 #0a2a43;
+	transition: ease-out 0.3s;
+}
+#footer #a1:hover{
+	background: #0a2a43;
+	color: black;
+	box-shadow: inset 134px 0px 0px 0px #3a5468;
+}
+#footer #a2:hover{
+	background: #0a2a43;
+	color: black;
+	box-shadow: inset 47px 0px 0px 0px #3a5468;
+}
+#footer #a3:hover{
+	background: #0a2a43;
+	color: black;
+	box-shadow: inset 75px 0px 0px 0px #3a5468;
+}
+#footer #a4:hover{
+	background: #0a2a43;
+	color: black;
+	box-shadow: inset 113px 0px 0px 0px #3a5468;
+}
+#footer #a5:hover{
+	background: #0a2a43;
+	color: black;
+	box-shadow: inset 132px 0px 0px 0px #3a5468;
+}
+
+
+
 
 
 /*
   ========================================
-  Links
+  Grid
   ========================================
 */
 
-a {
-  color: #648880;
-  text-decoration: none;
+.grid {
+  margin: 0 auto;
+  width: 960px;
 }
-a:hover {
-  color: #a9b2b9;
+.grid, .col-1-2{
+  padding-left: 15px;
+  padding-right: 15px;
 }
-p a {
-  border-bottom: 1px solid #dfe2e5;
+.grid1{
+  padding-left: 50px;
+  padding-right: 50px;
 }
-.primary-header a,
-.primary-foot a {
-  color: white;
-}
-.primary-header a:hover,
-.primary-foot a:hover {
-  color: #648880;
-}
-
-.group:before,
-.group:after {
-  content: "";
-  display: table;
-}
-.group:after {
-  clear: both;
-}
-.group {
-  clear: both;
-  *zoom: 1;
-}
-
-
-
-/*
-  ========================================
-  Primary header
-  ========================================
-*/
-
-.logo {
-  border-top: 4px solid #648880;
-  float: left;
-  font-size: 48px;
-  font-weight: 100;
-  letter-spacing: .5px;
-  line-height: 44px;
-  padding: 40px 0 22px 0;
-  text-transform: uppercase;
-}
-.tagline {
-  margin: 66px 0 22px 0;
-  text-align: right;
-}
-
-.primary-nav {
-  font-size: 14px;
-  font-weight: 400;
-  letter-spacing: .5px;
-  text-transform: uppercase;
-}
-
-
-/*
-  ========================================
-  Primary footer
-  ========================================
-*/
-
-.primary-foot {
-  color: #648880;
-  font-size: 14px;
-  padding-bottom: 44px;
-  padding-top: 44px;
-}
-
-/*
-  ========================================
-  Navigation
-  ========================================
-*/
-
-.nav {
-  text-align: right;
-}
-.nav li {
+.col-1-4 {
+  width: 24.7%;
   display: inline-block;
-  margin: 0 10px;
-  vertical-align: top;
+  height: 100vh;
+  transition: transform 0.5s;
+
+ }
+.col-1-4:hover {
+  transform: translate(-10px);
+  opacity: 1;
 }
-.nav li:last-child {
-  margin-right: 0;
+.img1 {
+	background: url('../foto/design.jpg');
+	max-width: 100%;
+  max-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  transition: 1s;
+}
+.img2 {
+	background: url('../foto/front.jpg');
+	max-width: 100%;
+  max-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  transition: 1s;
+}
+.img3 {
+	background: url('../foto/mentor.jpg');
+	max-width: 100%;
+  max-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  transition: 1s;
+}
+.img4 {
+	background: url('../foto/back.jpg');
+	max-width: 100%;
+  max-height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.4;
+  transition: 1s;
+}
+
+.col-1-2{
+	width: 45%;
+ 	display: inline-block;
+ 	vertical-align: top;
 }
 
 /*
@@ -177,8 +333,6 @@ p a {
 
 .row {
  background-color: white;
- padding: 66px 0 44px 0;
- min-width: 960px;
 }
 
 .row-alt {
@@ -191,277 +345,28 @@ p a {
 }
 
 
-/*
-  ========================================
-  Grid
-  ========================================
-*/
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-     -moz-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-
-.container,
-.grid {
-  margin: 0 auto;
-  width: 960px;
-}
-.container {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-.grid,
-.col-1-3,
-.col-2-3{
-  padding-left: 15px;
-  padding-right: 15px;
-}
-.col-1-3 {
-  display: inline-block;
-  vertical-align: top;
-  width: 33%;
-}
-.col-2-3 {
-  width: 66%;
-  display: inline-block;
-  vertical-align: top;
-}
-
-
-/*
-  ========================================
-  Home
-  ========================================
-*/
-
-.hero {
-  color: #fff;
-  line-height: 44px;
-  padding: 22px 80px 66px 80px;
-  text-align: center;
-}
-.hero h2 {
-  font-size: 36px;
-}
-.hero p {
-  font-size: 24px;
-  font-weight: 100;
-}
-.teaser a:hover h3 {
-  color: #a9b2b9;
-}
-.teaser img {
-  border-radius: 5px;
-  display: block;
-  margin-bottom: 22px;
-  max-width: 100%
-}
-
-
-/*
-  ========================================
-  Buttons
-  ========================================
-*/
 
 
 
-.button {
-  border-radius: 5px;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  font-weight: 400;
-  letter-spacing: .5px;
-  margin: 0;
-  text-transform: uppercase;
-}
-.button1{
-  border: 1px solid white;
-  padding: 10px 30px;
-}
-
-.button1:hover {
-  background: white;
-  color: #648880;
-}
-.button2{
-  border: 0 ;
-  background:#648880;
-  padding: 10px 30px;
-}
-.button2:hover {
-  background: #77a198;
-  color: white;
-}
 
 
-/*
-  ========================================
-  Leads
-  ========================================
-*/
-
-.lead {
-  text-align: center;
-}
-.lead p {
-  font-size: 21px;
-  line-height: 33px;
-}
-
-/*
-  ========================================
-  Speakers
-  ========================================
-*/
-
-.speaker {
-  margin-bottom: 44px;
-}
-.speaker-info {
-  border: 1px solid #dfe2e5;
-  border-radius: 5px;
-  margin-top: 88px;
-  padding-bottom: 22px;
-  text-align: center;
-}
-.speaker-info img {
-  border-radius: 50%;
-  height: 130px;
-  margin: -66px 0 22px 0;
-  vertical-align: top;
-}
 
 
-/*
-  ========================================
-  Venue
-  ========================================
-*/
-
-.venue-Sydney {
-  margin-bottom: 66px;
-}
-.venue-hotel {
-  margin-bottom: 22px;
-}
-.venue-map {
-  height: 264px;
-}
-
-/*
-  ========================================
-  Register
-  ========================================
-*/
-
-.why-attend {
-  list-style: square;
-  margin: 0 0 22px 30px;
-}
-form {
-  margin-bottom: 22px;
-}
-input,
-select,
-textarea {
-  font: 300 16px/22px "Lato", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.register-group label {
-  color: #648880;
-  cursor: pointer;
-  font-weight: 400;
-}
-.register-group input,
-.register-group select,
-.register-group textarea {
-  border: 1px solid #c6c9cc;
-  border-radius: 5px;
-  color: #888;
-  display: block;
-  margin: 5px 0 27px 0;
-  padding: 5px 8px;
-}
-.register-group input,
-.register-group textarea {
-  width: 100%;
-}
-.register-group select {
-  height: 34px;
-  width: 60px;
-}
-.register-group textarea {
-  height: 78px;
-}
 
 
-/*
-  ========================================
-  Schedule
-  ========================================
-*/
 
 
-table {
-  margin-bottom: 44px;
-  width: 100%;
-}
-table:last-child {
-  margin-bottom: 0;
-}
-th,
-td {
-  padding-bottom: 22px;
-  vertical-align: top;
-}
-th {
-  padding-right: 45px;
-  text-align: right;
-  width: 20%;
-}
-td {
-  width: 40%;
-}
-thead {
-  line-height: 44px;
-}
-thead th {
-  color: #648880;
-  font-size: 24px;
-}
-tbody th {
-  color: #a9b2b9;
-  font-size: 14px;
-  font-weight: 400;
-  padding-top: 22px;
-  text-transform: uppercase;
-}
-tbody td {
-  border-top: 1px solid #dfe2e5;
-  padding-top: 21px;
-}
-tbody td:first-of-type {
-  padding-right: 15px;
-}
-tbody td:last-of-type {
-  padding-left: 15px;
-}
-tbody td:only-of-type {
-  padding-left: 0;
-  padding-right: 0;
-}
-table a {
-  color: #888;
-}
-table h4 {
-  margin-bottom: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
